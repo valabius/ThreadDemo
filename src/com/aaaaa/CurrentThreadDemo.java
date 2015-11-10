@@ -15,5 +15,6 @@ public class CurrentThreadDemo {
         } catch (InterruptedException e) {
             System.out.println("Главный поток прерван");
         }
+        System.out.println("Завершение программы");
     }
 }

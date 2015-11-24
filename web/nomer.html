@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<META name="keywords" content="Вся Украина - жители " >
+<META name="description" content=" ">
+<title>      Вся Украина - жители</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/w3css/w3-theme-blue-grey.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<script async type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+    // This adds 'placeholder' to the items listed in the jQuery .support object.
+    jQuery(function() {
+        jQuery.support.placeholder = false;
+        test = document.createElement('input');
+        if('placeholder' in test) jQuery.support.placeholder = true;
+    });
+    // This adds placeholder support to browsers that wouldn't otherwise support it.
+    $(function() {
+        if(!$.support.placeholder) {
+            var active = document.activeElement;
+            $(':text').focus(function () {
+                if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+                    $(this).val('').removeClass('hasPlaceholder');
+                }
+            }).blur(function () {
+                if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+                    $(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+                }
+            });
+            $(':text').blur();
+            $(active).focus();
+            $('form:eq(0)').submit(function () {
+                $(':text.hasPlaceholder').val('');
+            });
+        }
+    });
+</script>
+
+<style>
+    #infobox {
+        width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        color: #333;
+        background-color: #9fe1ff;
+        border: 4px solid #333;
+        /* Our massive border-radius stack. */
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -o-border-radius: 10px;
+        -khtml-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: 0 0 5px #333;
+    }
+    .infobox input {
+        width: 80%;
+    }
+    .hasPlaceholder {
+        color: #777;
+    }
+
+    .siteMap {
+        font-size: x-large;
+    }
+</style>
+
+<body>
+
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+    <a href="/allukraina/" style='text-decoration: none'>
+        <img src="/pics/nomer.png" alt="nomer.org" style="float: left">
+        <div class="w3-center">
+            <h1><b> Вся Украина - жители</b></h1>
+        </div>
+    </a>
+</header>
+
+<section class="w3-container w3-theme w3-padding">
+    <div class="w3-center">
+
+
+        <form class="w3-form" action="/allukraina/" method="post" id="myForm">
+
+            <div class='infobox'  style='display: inline-block; margin: 5px; border: 3px'>
+                <input placeholder = 'Фамилия' class='w3-input w3-teal' text name='lastName'  value='' size='5' ></div>
+            <div class='infobox'  style='display: inline-block; margin: 5px; border: 3px'>
+                <input placeholder = '  Имя' class='w3-input w3-teal' text name='firstName'  value='' size='5' ></div>
+            <div class='infobox'  style='display: inline-block; margin: 5px; border: 3px'>
+                <input placeholder = '  Отчество' class='w3-input w3-teal' text name='middleName'  value='' size='5' ></div>
+            <div class='infobox'  style='display: inline-block; margin: 5px; border: 3px'>
+                <input placeholder = '  тел' class='w3-input w3-teal' text name='phone'  value='' size='5' ></div>
+            <div class='infobox'  style='display: inline-block; margin: 5px; border: 3px'>
+                <input placeholder = ' нас. пункт' class='w3-input w3-teal' text name='city'  value='' size='5' ></div>
+            <div class='infobox'  style='display: inline-block; margin: 5px; border: 3px'>
+                <input placeholder = ' ул.' class='w3-input w3-teal' text name='street'  value='' size='5' ></div>
+            <div class='infobox'  style='display: inline-block; margin: 5px; border: 3px'>
+                <input placeholder = ' дом' class='w3-input w3-teal' text name='nd'  value='' size='3' ></div>
+            <div class='infobox'  style='display: inline-block; margin: 5px; border: 3px'>
+            <input placeholder = ' кв' class='w3-input w3-teal' text name='nkv'  value='' size='3' ></div>
+            <button class="w3-btn w3-teal" type='submit' name="searchButton" value='Найти' >Найти</button>
+
+        </form>
+
+
+
+    </div>
+</section>
+
+<div class="w3-center w3-row">
+    <div class="w3-col m2">
+        <div class="w3-card-2 w3-padding">
+            <BR><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- nomer-automatic-size -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3833893513613970"
+                 data-ad-slot="5265167773"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <div class="w3-col m8">
+        <div class="w3-card-2 w3-padding-xlarge">
+
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- nomer-automatic-size -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3833893513613970"
+                 data-ad-slot="5265167773"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script><BR><BR>
+            <div class="opisanie">
+                База жителей Украины. База (как и другие разделы нашего портала)
+                может использоваться для поиска давно потерянных друзей родственников, одноклассников.
+            </div><br><BR><BR><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- nomer-automatic-size -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3833893513613970"
+                 data-ad-slot="5265167773"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script><BR><BR><center class='siteMap' ><a href ='/allukraina/lastName_2_pagenumber_0.html'>2</a> &nbsp; <a href ='/allukraina/lastName_5_pagenumber_0.html'>5</a> &nbsp; <a href ='/allukraina/lastName_H_pagenumber_0.html'>H</a> &nbsp; <a href ='/allukraina/lastName_Є_pagenumber_0.html'>Є</a> &nbsp; <a href ='/allukraina/lastName_І_pagenumber_0.html'>І</a> &nbsp; <a href ='/allukraina/lastName_А_pagenumber_0.html'>А</a> &nbsp; <a href ='/allukraina/lastName_Б_pagenumber_0.html'>Б</a> &nbsp; <a href ='/allukraina/lastName_В_pagenumber_0.html'>В</a> &nbsp; <a href ='/allukraina/lastName_Г_pagenumber_0.html'>Г</a> &nbsp; <a href ='/allukraina/lastName_Д_pagenumber_0.html'>Д</a> &nbsp; <a href ='/allukraina/lastName_Е_pagenumber_0.html'>Е</a> &nbsp; <a href ='/allukraina/lastName_Ж_pagenumber_0.html'>Ж</a> &nbsp; <a href ='/allukraina/lastName_З_pagenumber_0.html'>З</a> &nbsp; <a href ='/allukraina/lastName_И_pagenumber_0.html'>И</a> &nbsp; <a href ='/allukraina/lastName_Й_pagenumber_0.html'>Й</a> &nbsp; <a href ='/allukraina/lastName_К_pagenumber_0.html'>К</a> &nbsp; <a href ='/allukraina/lastName_Л_pagenumber_0.html'>Л</a> &nbsp; <a href ='/allukraina/lastName_М_pagenumber_0.html'>М</a> &nbsp; <a href ='/allukraina/lastName_Н_pagenumber_0.html'>Н</a> &nbsp; <a href ='/allukraina/lastName_О_pagenumber_0.html'>О</a> &nbsp; <a href ='/allukraina/lastName_П_pagenumber_0.html'>П</a> &nbsp; <a href ='/allukraina/lastName_Р_pagenumber_0.html'>Р</a> &nbsp; <a href ='/allukraina/lastName_С_pagenumber_0.html'>С</a> &nbsp; <a href ='/allukraina/lastName_Т_pagenumber_0.html'>Т</a> &nbsp; <a href ='/allukraina/lastName_У_pagenumber_0.html'>У</a> &nbsp; <a href ='/allukraina/lastName_Ф_pagenumber_0.html'>Ф</a> &nbsp; <a href ='/allukraina/lastName_Х_pagenumber_0.html'>Х</a> &nbsp; <a href ='/allukraina/lastName_Ц_pagenumber_0.html'>Ц</a> &nbsp; <a href ='/allukraina/lastName_Ч_pagenumber_0.html'>Ч</a> &nbsp; <a href ='/allukraina/lastName_Ш_pagenumber_0.html'>Ш</a> &nbsp; <a href ='/allukraina/lastName_Щ_pagenumber_0.html'>Щ</a> &nbsp; <a href ='/allukraina/lastName_Ы_pagenumber_0.html'>Ы</a> &nbsp; <a href ='/allukraina/lastName_Э_pagenumber_0.html'>Э</a> &nbsp; <a href ='/allukraina/lastName_Ю_pagenumber_0.html'>Ю</a> &nbsp; <a href ='/allukraina/lastName_Я_pagenumber_0.html'>Я</a> &nbsp; </center>
+
+
+        </div>
+    </div>
+
+    <div class="w3-col m2">
+        <div class="w3-card-2 w3-padding">
+            <p><a href='/azov/'>Азов</a></p><p><a href='/angarsk/'>Ангарск</a></p><p><a href='/astrakhan/'>Астрахань</a></p><p><a href='/mosgibdd/'>База ГИБДД</a></p><p><a href='/balagansk/'>Балаганск</a></p><p><a href='/berdsk/'>Бердск</a></p><p><a href='/jiteliberdsk/'>Бердск - жители</a></p><p><a href='/bratsk/'>Братск</a></p><p><a href='/velikieluki/'>Великие Луки</a></p><p><a href='/velcom/'>Велком</a></p><p><a href='/vladivostok/'>Владивосток</a></p><p><a href='/vladimir/'>Владимир</a></p><p><a href='/volgograd/'>Волгоград</a></p><p><a href='/jitelivolgograd/'>Волгоград - жители</a></p><p><a href='/volzhsky/'>Волжский</a></p><p><a href='/voronezh/'>Воронеж</a></p><p><a href='/allukraina/'>Вся Украина - жители</a></p><p><a href='/vyazma/'>Вязьма</a></p><p><a href='/edinet/'>Единцы</a></p><p><a href='/ekaterinburg/'>Екатеринбург</a></p><p><a href='/ektgibdd/'>Екатеринбург - база ГИБДД</a></p><p><a href='/zaporozhye/'>Запорожье</a></p><p><a href='/zima/'>Зима</a></p><p><a href='/ivanovo/'>Иваново</a></p><p><a href='/irkutsk/'>Иркутск</a></p><p><a href='/cahul/'>Кагул</a></p><p><a href='/kazan/'>Казань</a></p><p><a href='/kaluga/'>Калуга</a></p><p><a href='/karaganda/'>Караганда</a></p><p><a href='/causeni/'>Каушаны</a></p><p><a href='/kiev/'>Киев</a></p><p><a href='/kishinev/'>Кишинев</a></p><p><a href='/kostroma/'>Кострома</a></p><p><a href='/krasnodar/'>Краснодар</a></p><p><a href='/krasnoyarsk/'>Красноярск</a></p><p><a href='/lenkuz/'>Ленинск-Кузнецкий</a></p><p><a href='/livny/'>Ливны</a></p><p><a href='/lida/'>Лида</a></p><p><a href='/livov/'>Львов</a></p><p><a href='/minsk/'>Минск</a></p><p><a href='/moskva/'>Москва</a></p><p><a href='/nahodka/'>Находка</a></p><p><a href='/nnovgorod/'>Нижний Новгород</a></p><p><a href='/novosibirsk/'>Новосибирск</a></p><p><a href='/novosibgibdd/'>Новосибирск - база ГИБДД</a></p><p><a href='/novosibjiteli/'>Новосибирск - жители</a></p><p><a href='/omsk/'>Омск</a></p><p><a href='/orel/'>Орёл</a></p><p><a href='/orenburg/'>Оренбург</a></p><p><a href='/ostrov/'>Остров</a></p><p><a href='/pavlodar/'>Павлодар</a></p><p><a href='/spb/'>Петербург</a></p><p><a href='/petrozavodsk/'>Петрозаводск</a></p><p><a href='/pechora/'>Печора</a></p><p><a href='/pinsk/'>Пинск</a></p><p><a href='/porhov/'>Порхов</a></p><p><a href='/pskov/'>Псков</a></p><p><a href='/roslavl/'>Рославль</a></p><p><a href='/rostovnadonu/'>Ростов на Дону</a></p><p><a href='/rostovgibdd/'>Ростов-на-Дону - база ГИБДД</a></p><p><a href='/ryazan/'>Рязань</a></p><p><a href='/samara/'>Самара</a></p><p><a href='/safonovo/'>Сафоново</a></p><p><a href='/sayansk/'>Саянск</a></p><p><a href='/severodvinsk/'>Северодвинск</a></p><p><a href='/smolensk/'>Смоленск</a></p><p><a href='/stavropol/'>Ставрополь</a></p><p><a href='/jitelitaganrog/'>Таганрог - жители</a></p><p><a href='/tiraspol/'>Тирасполь</a></p><p><a href='/tyumen/'>Тюмень</a></p><p><a href='/uralsk/'>Уральск</a></p><p><a href='/usoliesibirskoe/'>Усолье-Сибирское</a></p><p><a href='/ustilimsk/'>Усть-Илимск</a></p><p><a href='/ustordynskiy/'>Усть-Ордынский</a></p><p><a href='/habarovsk/'>Хабаровск</a></p><p><a href='/kherson/'>Херсон</a></p><p><a href='/cheboksary/'>Чебоксары</a></p><p><a href='/chelyabinsk/'>Челябинск</a></p><p><a href='/cheremhovo/'>Черемхово</a></p><p><a href='/cherepovec/'>Череповец</a></p><p><a href='/chernivtsi/'>Черновцы</a></p><p><a href='/shelehov/'>Шелехов</a></p><p><a href='/yaroslavl/'>Ярославль</a></p><p><a href='/yartsevo/'>Ярцево</a></p>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark">
+    <h3>Nomer.Org</h3>
+    <script src="/li.js"></script>
+    <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+        <span class="w3-text w3-theme-dark">Перейти в начало</span>&nbsp;
+        <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+
+
+</footer>
+
+
+
+<script src="http://www.w3schools.com/lib/w3codecolors.js"></script>
+</body>
+</html>

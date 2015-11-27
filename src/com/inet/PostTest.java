@@ -14,6 +14,7 @@ public class PostTest {
         String url = props.remove("url").toString();
         String result = doPost(url, props);
         System.out.println(result);
+        writeToFile(result);
     }
 
     public  static  String doPost(String urlString, Map<Object, Object> nameValuesPairs) throws IOException {
@@ -51,4 +52,13 @@ public class PostTest {
         }
         return response.toString();
     }
+
+    public static void writeToFile(String str) {
+        try {
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("D:/nomer.html")));
+            bufferedWriter.write(str);
+            bufferedWriter.close();
+        } catch (IOException e) {e.printStackTrace();}
+    }
+
 }

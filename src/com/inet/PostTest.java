@@ -13,8 +13,8 @@ public class PostTest {
         props.load(in);
         String url = props.remove("url").toString();
         String result = doPost(url, props);
-        System.out.println(result);
         writeToFile(result);
+        System.out.println(result);
     }
 
     public  static  String doPost(String urlString, Map<Object, Object> nameValuesPairs) throws IOException {

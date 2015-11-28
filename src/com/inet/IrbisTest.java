@@ -6,10 +6,10 @@ import java.nio.file.*;
 import java.util.*;
 
 
-public class PostTest {
+public class IrbisTest {
     public static void main(String[] args) throws IOException {
         Properties props = new Properties();
-        InputStream in = Files.newInputStream(Paths.get("config5.properties"));
+        InputStream in = Files.newInputStream(Paths.get("irbis-config.properties"));
         props.load(in);
         String url = props.remove("url").toString();
         String result = doPost(url, props);
@@ -55,7 +55,7 @@ public class PostTest {
 
     public static void writeToFile(String str) {
         try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("D:/nomer.html")));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("D:/irbis.html")));
             bufferedWriter.write(str);
             bufferedWriter.close();
         } catch (IOException e) {e.printStackTrace();}

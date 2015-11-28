@@ -13,6 +13,6 @@ public class PropsTest {
         properties.load(in);
         String url = properties.remove("url").toString();
         System.out.println(properties);
-        System.out.println("Êèğèëèöÿ");
+        System.out.println("ĞšĞ¸Ñ€Ğ¸Ğ»Ğ¸Ñ†Ñ");
     }
 }

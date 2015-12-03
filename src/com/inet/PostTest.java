@@ -9,7 +9,7 @@ import java.util.*;
 public class PostTest {
     public static void main(String[] args) throws IOException {
         Properties props = new Properties();
-        InputStream in = Files.newInputStream(Paths.get("config5.properties"));
+        InputStream in = Files.newInputStream(Paths.get("config.properties"));
         props.load(in);
         String url = props.remove("url").toString();
         String result = doPost(url, props);

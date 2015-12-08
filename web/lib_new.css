@@ -1,0 +1,11 @@
+.content1 {
+    FONT-SIZE: 15px; PADDING-BOTTOM: 4pt; COLOR: #000000; PADDING-TOP: 4pt; BORDER-BOTTOM: #dadada 1px solid; FONT-FAMILY: Times New Roman; BORDER-COLLAPSE: collapse; TEXT-DECORATION: none
+}
+.content1 A:link {
+    FONT-SIZE: 15px; COLOR: #000000; PADDING-TOP: 4pt; FONT-FAMILY: Times New Roman; TEXT-DECORATION: none
+}
+.content1 A:visited {
+    FONT-SIZE: 15px; COLOR: #6f6f6f; PADDING-TOP: 4pt; FONT-FAMILY: Times New Roman; TEXT-DECORATION: none
+}
+.content1 A:hover {
+    FONT-SIZE: 15px; COLOR: #006699; PADDING-TOP: 4pt; FONT-FAMILY: Times New Roman; TEXT-DECORATION: none}

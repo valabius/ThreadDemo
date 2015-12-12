@@ -23,9 +23,10 @@ public class DisserParser {
         Iterator<Element> iterator;
         Element tr;
         Elements tds;
-        Element td;
         int count = 0;
         LinkedList<Dissertation> dissertations = new LinkedList<Dissertation>();
+        Elements links;
+        String url;
 
         boolean t = true;
         String address;
@@ -49,35 +50,37 @@ public class DisserParser {
             while(iterator.hasNext()) {
                 tr = iterator.next();
                 tds = tr.select("td");
-                td = tds.get(1);
 
                 for (int j = 0; j < 5; j++) {
-                    if(td.text().indexOf(str[j]) != -1) { count++; }
+                    if(tds.get(1).text().indexOf(str[j]) != -1) { count++; }
                 }
                 if(count > 0) {
-                    dissertations.add(new Dissertation(tds.get(0).text(), tds.get(1).text(), tds.get(2).text(), count));
+                    links = tds.select("a[href]");
+                    url = links.get(1).attr("abs:href");
+                    dissertations.add(new Dissertation(tds.get(0).text(), tds.get(1).text(), tds.get(2).text(), count, url));
                     count = 0;
                 }
 
             }
         }
 
-        System.out.println(dissertations.size());
+        for (Dissertation d : dissertations) {
+            System.out.println(d);
+        }
 
-        int k1 = 0;
-        int k2 = 0;
-        int k3 = 0;
-        int k4 = 0;
-        int k5 = 0;
+        LinkedList<Dissertation> selectedDissertations = new LinkedList<Dissertation>();
 
         for (int i = 0; i < dissertations.size(); i++) {
 
-            if(dissertations.get(i).getCount() == 4) { System.out.println(dissertations.get(i)); }
+            if(dissertations.get(i).getCount() == 4) { selectedDissertations.add(dissertations.get(i)); }
         }
 
         for (int i = 0; i < dissertations.size(); i++) {
 
-            if(dissertations.get(i).getCount() == 3) { System.out.println(dissertations.get(i)); }
+            if(dissertations.get(i).getCount() == 3) { selectedDissertations.add(dissertations.get(i));  }
         }
+
+        WriteToFile.writeToFile(selectedDissertations, "D:/disser5.html");
+
     }
 }

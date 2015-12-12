@@ -6,12 +6,14 @@ public class Dissertation {
     private String theme;
     private String year;
     private int count;
+    private String url;
 
-    public Dissertation(String author, String theme, String year, int count) {
+    public Dissertation(String author, String theme, String year, int count, String url) {
         this.author = author;
         this.theme = theme;
         this.year = year;
         this.count = count;
+        this.url = url;
     }
 
     public String getAuthor() {
@@ -44,6 +46,14 @@ public class Dissertation {
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String toString() {

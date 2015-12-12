@@ -23,12 +23,12 @@ public class Exp5 {
         Iterator<Element> iterator;
         Element tr;
         Elements tds;
-        Element td;
         int count = 0;
         LinkedList<Dissertation> dissertations = new LinkedList<Dissertation>();
+        Elements links;
+        String url;
 
         boolean t = true;
-
         String address;
         String firstAddress = "http://www.lib.ua-ru.net/disser/ru/code-13.00.02.html";
         String addressWithSuffix = "http://www.lib.ua-ru.net/disser/ru/code-13.00.02--p-";
@@ -50,13 +50,14 @@ public class Exp5 {
             while(iterator.hasNext()) {
                 tr = iterator.next();
                 tds = tr.select("td");
-                td = tds.get(1);
 
                 for (int j = 0; j < 5; j++) {
-                    if(td.text().indexOf(str[j]) != -1) { count++; }
+                    if(tds.get(1).text().indexOf(str[j]) != -1) { count++; }
                 }
                 if(count > 0) {
-                    dissertations.add(new Dissertation(tds.get(0).text(), tds.get(1).text(), tds.get(2).text(), count));
+                    links = tds.select("a[href]");
+                    url = links.get(1).attr("abs:href");
+                    dissertations.add(new Dissertation(tds.get(0).text(), tds.get(1).text(), tds.get(2).text(), count, url));
                     count = 0;
                 }
 
@@ -78,7 +79,7 @@ public class Exp5 {
 
         for (int i = 0; i < dissertations.size(); i++) {
 
-                if(dissertations.get(i).getCount() == 3) { System.out.println(dissertations.get(i)); }
+            if(dissertations.get(i).getCount() == 3) { System.out.println(dissertations.get(i)); }
         }
     }
 }

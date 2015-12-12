@@ -12,16 +12,13 @@ import java.util.LinkedList;
 public class Exp15 {
     public static void main(String[] args) throws IOException {
 
-        int count = 0;
-        String[] str = { "физи", "экспер", "виртуал", "комп", "модел" };
-
-        String string = "Методика использования учебных понятийных комплексов в условиях развивающего обучения физике в ВУЗе".toLowerCase();
-
-        for (int i = 0; i < 5; i++) {
-            if(string.indexOf(str[i]) != -1) { count++; }
-        }
-        System.out.println(string);
-        System.out.println(string.indexOf("физи"));
-
+        String s = "http://www.lib.ua-ru.net/diss/cont/515908.html";
+        String str = "AAAAA";
+        String table = "<tr>\n" +
+                "<td class=\"content1\"><a href=\"" + s + "\">" + str + "</a></td>\n" +
+                "<td class=\"content1\"><a href=\"" + s + "\">" + str + "</a></td>\n" +
+                "<td width=\"10\" class=\"content1\">" + str + "</a></td>\n" +
+                "</tr>\n";
+        System.out.println(table);
     }
 }

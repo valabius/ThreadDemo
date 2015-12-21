@@ -1,4 +1,4 @@
-package com.aaaaa;
+package com.thread;
 
 
 public class CurrentThreadDemo {

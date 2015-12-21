@@ -1,4 +1,4 @@
-package com.disser;
+package com.exp;
 
 public class Dissertation {
 

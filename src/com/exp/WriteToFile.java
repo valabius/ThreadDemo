@@ -1,4 +1,4 @@
-package com.disser;
+package com.exp;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -26,7 +26,7 @@ public class WriteToFile {
         String tableAfter = "</table>\n";
 
         for (int i = 0; i < dissertations.size(); i++) {
-            table = "<tr>\n" +
+            table = table + "<tr>\n" +
                     "<td class=\"content1\"><a href=\"" + dissertations.get(i).getUrl() + "\">" + dissertations.get(i).getAuthor() + "</a></td>\n" +
                     "<td class=\"content1\"><a href=\"" + dissertations.get(i).getUrl() + "\">" + dissertations.get(i).getTheme() + "</a></td>\n" +
                     "<td width=\"10\" class=\"content1\">" + dissertations.get(i).getYear() + "</a></td>\n" +

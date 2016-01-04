@@ -8,7 +8,7 @@ import java.io.*;
 
 public class WriterToFile {
 
-    public static void writeToFile(Disser disser, String fileName) throws IOException {
+    public static void writeDisserToFile(Disser disser, String fileName) throws IOException {
 
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(fileName)));
         bufferedWriter.write(disser.toString());
@@ -16,7 +16,7 @@ public class WriterToFile {
 
     }
 
-    public static void printToFile(Dissertations dissertations, String fileName) throws IOException {
+    public static void writeDissertationsToFile(Dissertations dissertations, String fileName) throws IOException {
 
         PrintWriter printWriter = new PrintWriter(new File(fileName));
 
@@ -25,6 +25,14 @@ public class WriterToFile {
         }
 
         printWriter.close();
+
+    }
+
+    public static void writeToFile(String str, String fileName) throws IOException {
+
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(fileName)));
+        bufferedWriter.write(str);
+        bufferedWriter.close();
 
     }
 

@@ -17,7 +17,7 @@ public class AllDissertationsMakerToTXT {
 
         System.out.println(allDissertations.size());
 
-        WriterToFile.printToFile(allDissertations, "D:/dissertations.txt");
+        WriterToFile.writeDissertationsToFile(allDissertations, "D:/dissertations5.txt");
 
     }
 

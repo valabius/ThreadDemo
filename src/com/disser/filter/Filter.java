@@ -37,7 +37,7 @@ public class Filter {
 
         int[] k = new int[keyWords.length];
 
-        Dissertations selectedDissertations = new Dissertations();
+        Dissertations sortedDissertations = new Dissertations();
 
         for (int i = 0; i < keyWords.length; i++) {
             for (int j = 0; j < dissertations.size(); j++) {
@@ -52,10 +52,36 @@ public class Filter {
 
         for (int i = keyWords.length; i > 0; i--) {
             for (int j = 0; j < dissertations.size(); j++) {
-                if(dissertations.get(j).getCount() == i) { selectedDissertations.add(dissertations.get(j)); }
+                if(dissertations.get(j).getCount() == i) { sortedDissertations.add(dissertations.get(j)); }
             }
         }
-        return selectedDissertations;
+        return sortedDissertations;
+    }
+
+    public static Dissertations makeHighLightedDissertations(Dissertations dissertations, String[] keyWords1, String[] keyWords2) {
+
+        String theme;
+        Dissertations highLightedDissertations = new Dissertations();
+
+        for (int i = 0; i < dissertations.size(); i++) {
+
+            theme = dissertations.get(i).getTheme();
+
+            for (int j = 0; j < keyWords1.length; j++) {
+                theme = theme.replaceAll(keyWords1[j], "<b><font color=\"green\">" + keyWords1[j] + "</font></b>");
+            }
+
+            for (int j = 0; j < keyWords2.length; j++) {
+                theme = theme.replaceAll(keyWords2[j], "<b><font color=\"red\">" + keyWords2[j] + "</font></b>");
+            }
+
+            theme = theme.replaceAll("ύκροεπ", "<b><font color=\"blue\">ύκροεπ</font></b>");
+
+            highLightedDissertations.add(new Dissertation(dissertations.get(i).getAuthor(), theme, dissertations.get(i).getYear(),
+                    dissertations.get(i).getCount(), dissertations.get(i).getUrl()));
+        }
+
+        return highLightedDissertations;
     }
 
 }

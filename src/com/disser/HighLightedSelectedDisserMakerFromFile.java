@@ -16,18 +16,21 @@ public class HighLightedSelectedDisserMakerFromFile {
         String[] keyWords = { "физи", "механ", "молекул", "термодин", "электри", "магнит", "оптик", "квант", "атом", "ядер" };
         //String[] keyWords5 = { "виртуал", "компью", "модел", "информац" };
         String[] keyWords5 = { "экспер", "виртуал", "компью", "модел", "информац" };
+        String[] keyWords15 = { "экспер"};
 
         Dissertations allDissertations = ReaderFromFile.ReadFromFile("D:/dissertations.txt");
         Dissertations dissertationsKeyWords = Filter.find(allDissertations, keyWords);
         Dissertations dissertationsKeyWords5 = Filter.find(dissertationsKeyWords, keyWords5);
 
         Dissertations sortedDissertations = Filter.sort(dissertationsKeyWords5, keyWords5);
-        Dissertations highLighterDissertations = Filter.makeHighLightedDissertations(sortedDissertations, keyWords, keyWords5);
+        Dissertations highLighterDissertations = Filter.makeHighLightedDissertations(sortedDissertations, keyWords, "green");
+        highLighterDissertations = Filter.makeHighLightedDissertations(highLighterDissertations, keyWords5, "red");
+        highLighterDissertations = Filter.makeHighLightedDissertations(highLighterDissertations, keyWords15, "blue");
 
         Client client = new Client();
         Disser htmlDisser = client.getDisser(highLighterDissertations);
 
-        WriterToFile.writeDisserToFile(htmlDisser, "D:/HighLighted selected dissertations.html");
+        WriterToFile.writeDisserToFile(htmlDisser, "D:/HighLighted selected dissertations55555.html");
 
     }
 

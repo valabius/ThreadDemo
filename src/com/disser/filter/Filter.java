@@ -23,7 +23,6 @@ public class Filter {
             }
 
             if(count > 0) {
-                dissertation.setCount(count);
                 selectedDissertations.add(dissertation);
                 count = 0;
             }
@@ -35,9 +34,27 @@ public class Filter {
 
     public static Dissertations sort(Dissertations dissertations, String[] keyWords) {
 
+        int count = 0;
+        Dissertation dissertation;
+        Dissertations sortedDissertations = new Dissertations();
+
         int[] k = new int[keyWords.length];
 
-        Dissertations sortedDissertations = new Dissertations();
+        for (int i = 0; i < dissertations.size(); i++) {
+            dissertations.get(i).setCount(0);
+        }
+
+        for(int i = 0; i < dissertations.size(); i++) {
+
+            for (int j = 0; j < keyWords.length; j++) {
+                if(dissertations.get(i).getTheme().indexOf(keyWords[j]) != -1) { count++; }
+            }
+
+            if(count > 0) {
+                dissertations.get(i).setCount(count);
+                count = 0;
+            }
+        }
 
         for (int i = 0; i < keyWords.length; i++) {
             for (int j = 0; j < dissertations.size(); j++) {
@@ -50,7 +67,7 @@ public class Filter {
             System.out.println("" + (i + 1) + " - " + k[i]);
         }
 
-        for (int i = keyWords.length; i > 0; i--) {
+        for (int i = keyWords.length; i > -1; i--) {
             for (int j = 0; j < dissertations.size(); j++) {
                 if(dissertations.get(j).getCount() == i) { sortedDissertations.add(dissertations.get(j)); }
             }

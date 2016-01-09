@@ -30,7 +30,7 @@ public class HighLightedSelectedDisserMakerFromFile {
         Client client = new Client();
         Disser htmlDisser = client.getDisser(highLighterDissertations);
 
-        WriterToFile.writeDisserToFile(htmlDisser, "D:/HighLighted selected dissertations55555.html");
+        WriterToFile.writeDisserToFile(htmlDisser, "D:/HighLighted selected dissertations.html");
 
     }
 

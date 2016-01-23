@@ -19,7 +19,7 @@ public class Filter {
             dissertation = iterator.next();
 
             for (int j = 0; j < keyWords.length; j++) {
-                if(dissertation.getTheme().indexOf(keyWords[j]) != -1) { count++; }
+                if(dissertation.getTheme().toLowerCase().indexOf(keyWords[j]) != -1) { count++; }
             }
 
             if(count > 0) {
@@ -47,7 +47,7 @@ public class Filter {
         for(int i = 0; i < dissertations.size(); i++) {
 
             for (int j = 0; j < keyWords.length; j++) {
-                if(dissertations.get(i).getTheme().indexOf(keyWords[j]) != -1) { count++; }
+                if(dissertations.get(i).getTheme().toLowerCase().indexOf(keyWords[j]) != -1) { count++; }
             }
 
             if(count > 0) {
@@ -77,12 +77,13 @@ public class Filter {
 
     public static Dissertations makeHighLightedDissertations(Dissertations dissertations, String[] keyWords, String htmlColor ) {
 
+        String s;
         String theme;
         Dissertations highLightedDissertations = new Dissertations();
 
         for (int i = 0; i < dissertations.size(); i++) {
 
-            theme = dissertations.get(i).getTheme();
+            theme = dissertations.get(i).getTheme().toLowerCase();
 
             for (int j = 0; j < keyWords.length; j++) {
                 theme = theme.replaceAll(keyWords[j], "<b><font color=\"" + htmlColor + "\">" + keyWords[j] + "</font></b>");

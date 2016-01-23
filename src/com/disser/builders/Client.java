@@ -5,9 +5,9 @@ import com.disser.dissertation.Dissertations;
 
 public class Client {
 
-    public Disser getDisser(Dissertations dissertations) {
+    public Disser getDisser(Dissertations dissertations, String title) {
 
-        DisserBuilder htmlDisserBuilder = new HTMLDisserBuilder(dissertations);
+        DisserBuilder htmlDisserBuilder = new HTMLDisserBuilder(dissertations, title);
         DisserDirector disserDirector = new DisserDirector();
         disserDirector.setDisserBuilder(htmlDisserBuilder);
         disserDirector.constractDisser();

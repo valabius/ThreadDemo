@@ -3,24 +3,29 @@ package com.disser.builders;
 import com.disser.dissers.HTMLDisser;
 import com.disser.dissertation.Dissertations;
 
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+
 public class HTMLDisserBuilder extends DisserBuilder {
 
-    private String header =
-            "<!DOCTYPE HTML>\n" +
-            "<html>\n" +
-            "   <head>\n" +
-            "       <meta charset=\"utf-8\">\n" +
-            "       <title>Disser</title>\n" +
-            "       <link rel=\"stylesheet\" type=\"text/css\" href=\"lib_new.css\">\n" +
-            "   </head>\n" +
-            "   <body>\n";
+    private String header;
 
-    private String footer =
-            "   </body>\n" +
-            "</html>";
+    private String footer;
 
-    public HTMLDisserBuilder(Dissertations drs) {
-        super(drs);
+    public HTMLDisserBuilder(Dissertations drs, String tl) {
+        super(drs, tl);
+        header =
+                "<!DOCTYPE HTML>\n" +
+                        "<html>\n" +
+                        "   <head>\n" +
+                        "       <meta charset=\"utf-8\">\n" +
+                        "       <title>" + tl + "</title>\n" +
+                        "       <link rel=\"stylesheet\" type=\"text/css\" href=\"lib_new.css\">\n" +
+                        "   </head>\n" +
+                        "   <body>\n";
+
+        footer =
+                "   </body>\n" +
+                        "</html>";
     }
 
     @Override

@@ -8,7 +8,7 @@ abstract public class DisserBuilder {
     protected Disser disser;
     protected Dissertations dissertations;
 
-    public DisserBuilder(Dissertations drs) {
+    public DisserBuilder(Dissertations drs, String tl) {
         dissertations = drs;
     }
 

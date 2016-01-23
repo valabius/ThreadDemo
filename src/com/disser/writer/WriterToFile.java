@@ -28,12 +28,4 @@ public class WriterToFile {
 
     }
 
-    public static void writeToFile(String str, String fileName) throws IOException {
-
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File(fileName)));
-        bufferedWriter.write(str);
-        bufferedWriter.close();
-
-    }
-
 }
